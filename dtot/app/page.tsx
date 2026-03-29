@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   CardContent,
   CardDescription,
@@ -11,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Field, FieldContent, FieldTitle, FieldDescription } from "@/components/ui/field";
+import { PlanRadioGroup } from "@/components/ui/choice-card";
 
 export default function Home() {
   const [spacing, setSpacing] = useState("plus");
@@ -50,48 +49,7 @@ export default function Home() {
             </Button>
           </CardFooter>
         </Card>
-
-        <RadioGroup
-          value={spacing}
-          onValueChange={setSpacing}
-          className="max-w-sm mt-10 space-y-3"
-        >
-          <Field
-            orientation="horizontal"
-            className="cursor-pointer rounded-xl border border-input p-4"
-            onClick={() => setSpacing("plus")}
-          >
-            <FieldContent>
-              <FieldTitle>Plus</FieldTitle>
-              <FieldDescription>For individuals and small teams.</FieldDescription>
-            </FieldContent>
-            <RadioGroupItem value="plus" />
-          </Field>
-
-          <Field
-            orientation="horizontal"
-            className="cursor-pointer rounded-xl border border-input p-4"
-            onClick={() => setSpacing("pro")}
-          >
-            <FieldContent>
-              <FieldTitle>Pro</FieldTitle>
-              <FieldDescription>For growing businesses.</FieldDescription>
-            </FieldContent>
-            <RadioGroupItem value="pro" />
-          </Field>
-
-          <Field
-            orientation="horizontal"
-            className="cursor-pointer rounded-xl border border-input p-4"
-            onClick={() => setSpacing("enterprise")}
-          >
-            <FieldContent>
-              <FieldTitle>Enterprise</FieldTitle>
-              <FieldDescription>For large teams and enterprises.</FieldDescription>
-            </FieldContent>
-            <RadioGroupItem value="enterprise" />
-          </Field>
-        </RadioGroup>
+        <PlanRadioGroup/>
       </main>
     </div>
   );
