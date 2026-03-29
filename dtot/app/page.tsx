@@ -17,15 +17,7 @@ export default function Home() {
             To get started, edit the page.tsx file.
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to the{" "}
-            <a
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-foreground underline"
-            >
-              Next.js documentation
-            </a>
+            Looking for a starting point or more instructions? Head over to com me may
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
