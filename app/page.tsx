@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FieldChoiceCard } from "@/components/ui/choice-card";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Image from "next/image";
@@ -29,15 +28,7 @@ export default function Home() {
             trang sẽ biến bạn thành femboi trong 3 ngày, nếu bạn muốn trở thành femboi thì hãy edit file page.tsx ngay bây giờ, nếu không thì thôi đừng edit nữa
           </p>
         </div>
-        <FieldChoiceCard
-        quesname="Cau 1"
-        quesdesc="con me may nang bao nhieu"
-        ans1="Kubernetes"
-        ans2="Virtual Machine" 
-        ans3="conme may"
-        ans4="skibidi"
-        imga="https://wallpaperaccess.com/full/8405958.jpg"
-        />
+        
         <Button className="m-3 scale-120" variant="outline">Xác nhận</Button>
       </main>
     </div>

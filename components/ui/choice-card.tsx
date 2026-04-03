@@ -10,42 +10,37 @@ import {
 } from "@/components/ui/field"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
-export function FieldChoiceCard(
-  { quesname,
-    quesdesc,
-    ans1,
-    ans2,
-    ans3,
-    ans4,
-    ansdes1,
-    ansdes2,
-    ansdes3,
-    ansdes4,
-    imga
-    }:
-    {
-      quesname: string;
-      quesdesc: string;
-      ans1: string;
-      ans2: string;
-      ans3: string;
-      ans4: string;
-      ansdes1?: string;
-      ansdes2?: string;
-      ansdes3?: string;
-      ansdes4?: string,
-      imga?: string;
-    }) {
+interface FieldChoiceCardProps {
+  quesname: string;
+  quesdesc: string;
+  ans1: string;
+  ans2: string;
+  ans3: string;
+  ans4: string;
+  ansdes1?: string;
+  ansdes2?: string;
+  ansdes3?: string;
+  ansdes4?: string;
+  imga?: string;
+}
+
+interface fieldChoiceCardGroupProps {
+  fccprops: FieldChoiceCardProps[]
+}
+
+const FieldChoiceCardGroup = (
+  { fccprops }: fieldChoiceCardGroupProps
+) => {
   return (
     <div className="w-full p-6 pt-5 rounded-lg border">
       <FieldGroup className="w-full">
         <FieldSet>
           <FieldLegend variant="label">{quesname}</FieldLegend>
-          <FieldDescription className="text-md">
+          <FieldDescription className="text-lg hover:text-zinc-700 ">
             {quesdesc}
             {imga && (
               <img
-                className="inline-block rounded-md mt-4 mb-4 hover:scale-102 transition-transform"
+                className="inline-block rounded-md mt-4 mb-4 active:scale-99 hover:scale-102 transition-transform"
                 src={imga}
                 alt="Question image"
               />
@@ -102,3 +97,5 @@ export function FieldChoiceCard(
     </div>
   )
 }
+
+export default FieldChoiceCardGroup
