@@ -1,8 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import FieldChoiceCard from "@/components/ui/choice-card";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -28,7 +27,22 @@ export default function Home() {
             trang sẽ biến bạn thành femboi trong 3 ngày, nếu bạn muốn trở thành femboi thì hãy edit file page.tsx ngay bây giờ, nếu không thì thôi đừng edit nữa
           </p>
         </div>
-        
+        <FieldChoiceCard
+          quesname="Bạn có muốn trở thành femboi không?"
+          quesdesc="Nếu bạn chọn có thì bạn sẽ trở thành femboi trong 3 ngày, nếu bạn chọn không thì thôi đừng edit nữa"
+          opt={[
+            {
+              ans: "Có",
+              ansdes: "Bạn sẽ trở thành femboi trong 3 ngày",
+              id: "option-one"
+            },
+            {
+              ans: "Không",
+              ansdes: "Bạn sẽ không trở thành femboi",
+              id: "option-two"
+            },
+          ]}
+        />
         <Button className="m-3 scale-120" variant="outline">Xác nhận</Button>
       </main>
     </div>
