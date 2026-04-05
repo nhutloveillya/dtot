@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import FieldChoiceCard from "@/components/ui/choice-card";
+import { FormTanstackRadioGroup } from "@/components/ui/testform";
+import { ModeToggle } from "@/components/ui/toggle-dm";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -11,6 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <ModeToggle />
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -44,6 +47,7 @@ export default function Home() {
           ]}
         />
         <Button className="m-3 scale-120" variant="outline">Xác nhận</Button>
+          <FormTanstackRadioGroup />
       </main>
     </div>
   );
