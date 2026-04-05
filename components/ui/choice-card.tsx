@@ -22,7 +22,9 @@ function FieldChoiceCardOption({
   return (
     <FieldLabel htmlFor={id}>
       <Field orientation="horizontal">
-        <RadioGroupItem value={ans.toLowerCase()} id={id} />
+        <RadioGroupItem
+        value={ans.toLowerCase()}
+        id={id} />
         <FieldContent>
           <FieldTitle>{ans}</FieldTitle>
           <FieldDescription>
@@ -56,11 +58,10 @@ export default function FieldChoiceCard(
 ) {
 
   return (
-    <div className="w-full p-6 pt-5 rounded-lg border">
-      <FieldGroup className="w-full">
+  <FieldGroup className="w-full">
         <FieldSet>
           <FieldLegend variant="label">{quesname}</FieldLegend>
-          <FieldDescription className="hover:text-zinc-700 ">
+          <FieldDescription>
             {quesdesc}
             {imga && (
               <img
@@ -77,6 +78,5 @@ export default function FieldChoiceCard(
           </RadioGroup>
         </FieldSet>
       </FieldGroup>
-    </div>
   )
 }

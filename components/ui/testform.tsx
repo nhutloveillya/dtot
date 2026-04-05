@@ -29,7 +29,7 @@ import {
   RadioGroupItem,
 } from "@/components/ui/radio-group"
 
-const plans = [
+export const plans = [
   {
     id: "starter",
     title: "Starter (100K tokens/month)",
@@ -39,11 +39,6 @@ const plans = [
     id: "pro",
     title: "Pro (1M tokens/month)",
     description: "For advanced AI usage with more features.",
-  },
-  {
-    id: "enterprise",
-    title: "Enterprise (Unlimited tokens)",
-    description: "For large teams and heavy usage.",
   },
 ] as const
 
