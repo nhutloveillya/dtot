@@ -60,7 +60,7 @@ export default function FieldChoiceCard(
       <FieldGroup className="w-full">
         <FieldSet>
           <FieldLegend variant="label">{quesname}</FieldLegend>
-          <FieldDescription className="text-lg hover:text-zinc-700 ">
+          <FieldDescription className="hover:text-zinc-700 ">
             {quesdesc}
             {imga && (
               <img
